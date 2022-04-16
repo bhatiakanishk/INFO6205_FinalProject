@@ -12,3 +12,13 @@ class Game_Board:
         print("-------")
         print("|"  + self.game_board[6] + "|"  + self.game_board[7] + "|" + self.game_board[8] + "|")
         print("-------")
+
+    def win_condition(self):
+        pass
+
+    def draw_condition(self):
+        pass
+
+    def lose_condition(self):
+        #Needed? If not win and not draw, then lose?!
+        pass
