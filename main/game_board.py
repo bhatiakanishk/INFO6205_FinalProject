@@ -1,5 +1,5 @@
 class Game_Board:
-    def initialize_board(self):
+    def __init__(self):
         #To declare empty game board
         self.game_board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',]
     
