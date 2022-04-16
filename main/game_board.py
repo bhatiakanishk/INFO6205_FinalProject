@@ -34,7 +34,17 @@ class Game_Board:
         return win_condition
 
     def draw_condition(self):
-        pass
+        #To check for empty cells on the board
+        empty_cell = 0
+        for cell in self.game_board:
+            if cell == ' ':
+                #Increment counter if there are empty cells
+                empty_cell = empty_cell + 1
+        #If there are no empty cells, game is drawn
+        if empty_cell == 0:
+            return True 
+        return False
+
 
     def lose_condition(self):
         #Needed? If not win and not draw, then lose?!
