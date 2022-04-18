@@ -17,4 +17,3 @@ def gameplay(self):
     #Validate if move is valid, i.e. between 0 and 8
     if(move>=0 and move<9):
         game_board.make_move_on_board(move, "X")
-    

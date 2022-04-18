@@ -45,7 +45,9 @@ class Game_Board:
             return True 
         return False
 
-
     def lose_condition(self):
         #Needed? If not win and not draw, then lose?!
         pass
+
+    def make_move_on_board(self, position, symbol):
+        self.game_board[position] = symbol
