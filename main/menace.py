@@ -8,6 +8,11 @@ class Menace:
         #This is an array to store the moves played by Menace. Will be used for training.
         self.moves_played = []
 
+        alpha = 5
+        beta = 3
+        gamma = 2
+        delta = 1
+
     #Function to decide which move Menace will make1
     def move_to_make(self, game_board):
         #Menace will learn game_states as and when it sees them
@@ -20,7 +25,7 @@ class Menace:
                     beads_dataset.append(cell_counter)
                     cell_counter += 1
             #Add 5 beads of the available moves
-            self.game_states[game_board] = beads_dataset * 5
+            self.game_states[game_board] = beads_dataset * self.alpha
 
         #Get the beads for a particular game state
         available_beads = self.game_states[game_board]
@@ -34,12 +39,18 @@ class Menace:
         
     def win_result(self):
         #Adding beads to elements in moves_played on winning the game
-        pass
+        print("Menace Wins.")
+        for(game_board, chosen_bead) in self.moves_played:
+            for iterations in range(self.beta):
+                self.game_states[game_board].append(chosen_bead)
 
     def draw_result(self):
         #Adding beads to elements in moves_played on drawing the game
-        pass
+        print("Menace Draws")
+        for(game_board, chosen_bead) in self.moves_played:
+            for iterations in range(self.delta):
+                self.game_states[game_board].append(chosen_bead)
 
     def lose_result(self):
         #Confiscate beads from elements in moves_played on loosing the game
-        pass
+        print("Menace Loses.")

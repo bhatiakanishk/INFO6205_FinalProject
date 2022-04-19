@@ -13,7 +13,10 @@ def gameplay(self):
     
     #Take move input from human
     move = human.human_move()
-
     #Validate if move is valid, i.e. between 0 and 8
     if(move>=0 and move<9):
         game_board.make_move_on_board(move, "X")
+    
+    menace_move = menace.move_to_make()
+    if(move>=0 and move<9):
+        game_board.make_move_on_board(menace_move, "0")
