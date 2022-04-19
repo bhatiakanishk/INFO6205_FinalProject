@@ -51,3 +51,7 @@ class Game_Board:
 
     def make_move_on_board(self, position, symbol):
         self.game_board[position] = symbol
+        print("Make move called")
+
+    def board_string(self):
+        return ''.join(self.game_board) #??????
