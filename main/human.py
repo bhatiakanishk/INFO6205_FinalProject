@@ -1,3 +1,4 @@
+import random
 class Human:
     def __init__(self):
         pass
@@ -55,5 +56,34 @@ class Human:
     def center(self, game_board):
         if(self.game_board[4] == ' '):
             return 4
+        else:
+            return -1
+
+    #Opposite corner: If the opponent is in the corner, the player plays the opposite corner.
+    def opposite_corner(self, game_board):
+        if(self.game_board[0] != ' '):
+            return 8
+        elif(self.game_board[2] != ' '):
+            return 6
+        elif(self.game_board[6] != ' '):
+            return 6
+        elif(self.game_board[8] != ' '):
+            return 0
+        else:
+            return -1
+    
+    #Empty corner: The player plays in a corner square
+    def empty_corner(self, game_board):
+        corner_list = [0, 2, 6, 8]
+        if(self.game_board[0] == ' ' or self.game_board[2] == ' ' or self.game_board[6] == ' ' or self.game_board[8] == ' '):
+            return random.choice(corner_list)
+        else:
+            return -1
+    
+    #Empty side: The player plays in a middle square on any of the four sides.
+    def empty_side(self, game_board):
+        side_list = [1, 3, 5, 7]
+        if(self.game_board[1] == ' ' or  self.game_board[3] == ' ' or self.game_board[5] == ' ' or self.game_board[7] == ' '):
+            return random.choice(side_list)
         else:
             return -1
