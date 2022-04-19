@@ -54,4 +54,4 @@ class Game_Board:
         print("Make move called")
 
     def board_string(self):
-        return ''.join(self.game_board) #??????
+        return ''.join(self.game_board)
