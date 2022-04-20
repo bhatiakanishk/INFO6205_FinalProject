@@ -15,19 +15,21 @@ class Menace:
 
     #Function to decide which move Menace will make1
     def move_to_make(self, game_board):
-        game_board = game_board.board_string() #?????
+        game_board = game_board.board_string()
         #Menace will learn game_states as and when it sees them
         if game_board not in self.game_states:
-            beads_dataset = []
-            cell_counter = 0
-            print(game_board)
-            for cell in game_board:
-                if cell == ' ':
-                    #Add cell number to beads_dataset
-                    beads_dataset.append(cell_counter)
-                    cell_counter += 1
+            fill_beads = [pos for pos, symbol in enumerate(game_board) if symbol == ' '] #?????
+            print(fill_beads)
+            # beads_dataset = []
+            # cell_counter = 0
+            # print(game_board)
+            # for cell in game_board:
+            #     if cell == ' ':
+            #         #Add cell number to beads_dataset
+            #         beads_dataset.append(cell_counter)
+            #         cell_counter += 1
             #Add 5 beads of the available moves
-            self.game_states[game_board] = beads_dataset * self.alpha
+            self.game_states[game_board] = fill_beads * self.alpha
 
         #Get the beads for a particular game state
         available_beads = self.game_states[game_board]
