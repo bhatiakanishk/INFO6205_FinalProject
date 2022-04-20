@@ -5,13 +5,13 @@ class Game_Board:
     
     def display_board(self):
         #To display board on the terminal
-        print("-------")
-        print("|"  + self.game_board[0] + "|"  + self.game_board[1] + "|" + self.game_board[2] + "|")
-        print("-------")
-        print("|"  + self.game_board[3] + "|"  + self.game_board[4] + "|" + self.game_board[5] + "|")
-        print("-------")
-        print("|"  + self.game_board[6] + "|"  + self.game_board[7] + "|" + self.game_board[8] + "|")
-        print("-------")
+        print("------||------")
+        print("|"  + self.game_board[0] + "|"  + self.game_board[1] + "|" + self.game_board[2] + "||" + "0" + "|" + "1" + "|" + "2" + "|")
+        print("------||------")
+        print("|"  + self.game_board[3] + "|"  + self.game_board[4] + "|" + self.game_board[5] + "||" + "3" + "|" + "4" + "|" + "5" + "|")
+        print("------||------")
+        print("|"  + self.game_board[6] + "|"  + self.game_board[7] + "|" + self.game_board[8] + "||" + "6" + "|" + "7" + "|" + "8" + "|")
+        print("------||------")
 
     def win_condition(self):
         win_condition = False
@@ -51,7 +51,13 @@ class Game_Board:
 
     def make_move_on_board(self, position, symbol):
         self.game_board[position] = symbol
-        print("Make move called")
+
+    def is_move_valid(self, move, board):
+        move = int(move)
+        board = board.board_string()
+        if move>=0 and move<9 and board[move] == ' ':
+            return True
+        return False
 
     def board_string(self):
         return ''.join(self.game_board)
