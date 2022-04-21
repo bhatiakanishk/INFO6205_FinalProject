@@ -1,3 +1,4 @@
+from concurrent.futures import ThreadPoolExecutor
 from game_board import Game_Board
 from menace import Menace
 from human import Human
@@ -5,15 +6,15 @@ from human import Human
 #This method uses human optimal strategy for opponent
 def training():
     game_board_training = Game_Board()
-    game_board_training.display_board()
+    #game_board_training.display_board()
 
     while True:
         #Determine move of menace based on training
         menace_move = menace.move_to_make(game_board_training)
-        #Validate if move is valid, i.e. between 0 and 8 and cell is empty
-        #if game_board_training.is_move_valid(menace_move, game_board_training):
         game_board_training.make_move_on_board(menace_move, "X")
-        game_board_training.display_board()
+        
+        #print("Move Made By Menace:")
+        #game_board_training.display_board()
 
         if game_board_training.win_condition():
             menace.win_result()
@@ -30,7 +31,7 @@ def training():
         #Validate if move is valid, i.e. between 0 and 8 and cell is empty
         if game_board_training.is_move_valid(human_move, game_board_training):
             game_board_training.make_move_on_board(human_move, "O")
-            game_board_training.display_board()
+            #game_board_training.display_board()
 
             if game_board_training.win_condition():
                 human.win_result()
@@ -50,14 +51,13 @@ def training():
 def gameplay():
     game_board_gameplay = Game_Board()
     game_board_gameplay.display_board()
-    #game_board_gameplay = game_board_gameplay.board_string()
     
     while True:
         #Determine move of menace based on training
         menace_move = menace.move_to_make(game_board_gameplay)
-        #Validate if move is valid, i.e. between 0 and 8 and cell is empty
-        #if game_board_gameplay.is_move_valid(menace_move, game_board_gameplay):
         game_board_gameplay.make_move_on_board(menace_move, "X")
+
+        print("Move Made By Menace:")
         game_board_gameplay.display_board()
 
         if game_board_gameplay.win_condition():
@@ -71,7 +71,6 @@ def gameplay():
 
 
         #Take move input from human
-        #human_move = human.human_move()
         human_move = input("Make a move on the board:")
         human_move = int(human_move)
         #Validate if move is valid, i.e. between 0 and 8 and cell is empty
@@ -99,10 +98,23 @@ if __name__ == '__main__':
     human = Human()
 
     print("Training now:")
-    for i in range(30):
-        training()
-    print("Training complete")    
     
+    #Multithreading implementation
+    processes = []
+    with ThreadPoolExecutor(max_workers=100) as executor:
+        for i in range(300):
+            processes.append(executor.submit(training()))
+    print("Training complete")    
+
+    print("-------------------------------------------------") 
+
     print("Gameplay now:")
     gameplay()
     print("Gameplay complete")
+    while True:
+        decision = input("Play again? Press y to play again and any other key to cancel:")
+        if decision == 'y':
+            gameplay()
+            print("Gameplay complete")
+        else:
+            break

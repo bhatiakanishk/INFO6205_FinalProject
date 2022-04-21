@@ -18,18 +18,14 @@ class Menace:
         game_board = game_board.board_string()
         #Menace will learn game_states as and when it sees them
         if game_board not in self.game_states:
-            fill_beads = [pos for pos, symbol in enumerate(game_board) if symbol == ' '] #?????
-            print(fill_beads)
-            # beads_dataset = []
-            # cell_counter = 0
-            # print(game_board)
-            # for cell in game_board:
-            #     if cell == ' ':
-            #         #Add cell number to beads_dataset
-            #         beads_dataset.append(cell_counter)
-            #         cell_counter += 1
+            beads_dataset = []
+            print(game_board)
+            for iterator, cell in enumerate(game_board):
+                if cell == ' ':
+                    #Add cell number to beads_dataset
+                    beads_dataset.append(iterator)
             #Add 5 beads of the available moves
-            self.game_states[game_board] = fill_beads * self.alpha
+            self.game_states[game_board] = beads_dataset * self.alpha
 
         #Get the beads for a particular game state
         available_beads = self.game_states[game_board]
