@@ -1,3 +1,4 @@
+from concurrent.futures import ThreadPoolExecutor
 from game_board import Game_Board
 from menace import Menace
 from human import Human
@@ -97,8 +98,12 @@ if __name__ == '__main__':
     human = Human()
 
     print("Training now:")
-    for i in range(30):
-        training()
+    
+    #Multithreading implementation
+    processes = []
+    with ThreadPoolExecutor(max_workers=100) as executor:
+        for i in range(300):
+            processes.append(executor.submit(training()))
     print("Training complete")    
 
     print("-------------------------------------------------") 
@@ -106,3 +111,10 @@ if __name__ == '__main__':
     print("Gameplay now:")
     gameplay()
     print("Gameplay complete")
+    while True:
+        decision = input("Play again? Press y to play again and any other key to cancel:")
+        if decision == 'y':
+            gameplay()
+            print("Gameplay complete")
+        else:
+            break
