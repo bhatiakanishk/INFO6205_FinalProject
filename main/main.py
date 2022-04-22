@@ -102,7 +102,7 @@ if __name__ == '__main__':
     #Multithreading implementation
     processes = []
     with ThreadPoolExecutor(max_workers=100) as executor:
-        for i in range(300):
+        for i in range(100000):
             processes.append(executor.submit(training()))
     print("Training complete")    
 
