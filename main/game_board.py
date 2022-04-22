@@ -3,6 +3,12 @@ class Game_Board:
         #To declare empty game board
         self.game_board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',]
     
+    def set_game_board(self, game_board):
+        self.game_board = game_board
+    
+    def get_game_board(self):
+        return self.game_board
+
     def display_board(self):
         #To display board on the terminal
         print("------||------")
