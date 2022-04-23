@@ -12,6 +12,12 @@ class Menace:
         self.beta = 3
         self.gamma = 2
         self.delta = 1
+    
+    def get_moves_played(self):
+        return self.moves_played
+
+    def get_game_states(self):
+        return self.game_states
 
     #Function to decide which move Menace will make1
     def move_to_make(self, game_board):
