@@ -1,0 +1,124 @@
+Time: 2022-04-23 09:25:36.571207 | Result: Menace Win
+Time: 2022-04-23 09:25:36.571549 | Result: Menace Lose
+Time: 2022-04-23 09:25:36.571805 | Result: Menace Win
+Time: 2022-04-23 09:25:36.572185 | Result: Menace Lose
+Time: 2022-04-23 09:25:36.572511 | Result: Menace Lose
+Time: 2022-04-23 09:25:36.572800 | Result: Menace Win
+Time: 2022-04-23 09:25:36.573100 | Result: Menace Lose
+Time: 2022-04-23 09:25:36.573433 | Result: Menace Win
+Time: 2022-04-23 09:25:36.574844 | Result: Menace Win
+Time: 2022-04-23 09:25:36.575638 | Result: Menace Lose
+Number of games: 10
+Number of wins: 5
+Number of draws: 0
+Number of loses: 5
+Win Percentage: 50.0
+Lost Percentage: 50.0
+-------------------------------------------------
+Time: 2022-04-23 09:25:45.549537 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.549921 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.550235 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.550553 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.550814 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.551048 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.551399 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.551777 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.552230 | Result: Menace Draw
+Time: 2022-04-23 09:25:45.552657 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.552949 | Result: Menace Win
+Time: 2022-04-23 09:25:45.553641 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.554138 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.554519 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.557605 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.558092 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.558542 | Result: Menace Win
+Time: 2022-04-23 09:25:45.559078 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.559843 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.560105 | Result: Menace Win
+Time: 2022-04-23 09:25:45.560307 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.560457 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.560670 | Result: Menace Win
+Time: 2022-04-23 09:25:45.561106 | Result: Menace Win
+Time: 2022-04-23 09:25:45.561482 | Result: Menace Win
+Time: 2022-04-23 09:25:45.561754 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.562098 | Result: Menace Win
+Time: 2022-04-23 09:25:45.562602 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.562993 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.563220 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.563722 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.564534 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.564981 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.565454 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.566187 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.566724 | Result: Menace Draw
+Time: 2022-04-23 09:25:45.567089 | Result: Menace Win
+Time: 2022-04-23 09:25:45.567631 | Result: Menace Draw
+Time: 2022-04-23 09:25:45.568008 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.568462 | Result: Menace Win
+Time: 2022-04-23 09:25:45.568935 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.569361 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.569671 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.570060 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.570397 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.570861 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.571168 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.571416 | Result: Menace Draw
+Time: 2022-04-23 09:25:45.572304 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.572738 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.573046 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.574065 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.574664 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.574938 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.576196 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.576419 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.577115 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.579348 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.581995 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.585648 | Result: Menace Win
+Time: 2022-04-23 09:25:45.586072 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.589149 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.589974 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.590361 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.590970 | Result: Menace Win
+Time: 2022-04-23 09:25:45.591163 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.591523 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.592009 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.592186 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.592342 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.592466 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.595806 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.599727 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.600764 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.603039 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.604500 | Result: Menace Win
+Time: 2022-04-23 09:25:45.606586 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.607819 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.610256 | Result: Menace Win
+Time: 2022-04-23 09:25:45.611773 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.613394 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.613628 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.614913 | Result: Menace Win
+Time: 2022-04-23 09:25:45.616782 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.618288 | Result: Menace Win
+Time: 2022-04-23 09:25:45.618482 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.618636 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.618781 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.619367 | Result: Menace Draw
+Time: 2022-04-23 09:25:45.620043 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.620836 | Result: Menace Win
+Time: 2022-04-23 09:25:45.621260 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.621590 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.621790 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.622680 | Result: Menace Draw
+Time: 2022-04-23 09:25:45.623022 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.623462 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.623915 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.624222 | Result: Menace Lose
+Time: 2022-04-23 09:25:45.624688 | Result: Menace Lose
+Number of games: 100
+Number of wins: 16
+Number of draws: 6
+Number of loses: 78
+Win Percentage: 16.0
+Lost Percentage: 78.0
+-------------------------------------------------
