@@ -100,16 +100,17 @@ class Human:
         return random.choice(side_list)
 
     def human_move(self, game_board):
+        game_board_object = game_board
         game_board = game_board.board_string()
         move = -1
         move = self.two_in_a_row(game_board)
-        if move == -1:
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
             move = self.center(game_board)
-        if move == -1:
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
             move = self.opposite_corner(game_board)
-        if move == -1:
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
             move = self.empty_corner(game_board)
-        if move == -1:
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
             move = self.empty_side(game_board)
 
         return move
