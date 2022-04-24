@@ -1,0 +1,17 @@
+Time: 2022-04-23 12:01:53.222078 | Game Starts 
+Time: 2022-04-23 12:01:53.222083 | Move made by menace: 8
+Time: 2022-04-23 12:01:56.032949 | Move made by human: 8
+Time: 2022-04-23 12:01:56.033291 | Move made by menace: 5
+Time: 2022-04-23 12:01:57.611298 | Move made by human: 5
+Time: 2022-04-23 12:01:57.611557 | Move made by menace: 7
+Time: 2022-04-23 12:02:03.456113 | Move made by human: 7
+Time: 2022-04-23 12:02:03.456113 | Game Ends 
+Time: 2022-04-23 12:02:05.008435 | Game Starts 
+Time: 2022-04-23 12:02:05.008541 | Move made by menace: 6
+Time: 2022-04-23 12:02:06.931187 | Move made by human: 6
+Time: 2022-04-23 12:02:06.931524 | Move made by menace: 7
+Time: 2022-04-23 12:02:08.786557 | Move made by human: 7
+Time: 2022-04-23 12:02:08.786746 | Move made by menace: 2
+Time: 2022-04-23 12:02:12.095811 | Move made by human: 2
+Time: 2022-04-23 12:02:12.095945 | Move made by menace: 4
+Time: 2022-04-23 12:02:12.095945 | Game Ends 
