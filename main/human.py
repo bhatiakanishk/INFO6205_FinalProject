@@ -561,8 +561,8 @@ class Human:
         else:
             return -1
 
-    # Fork E
-    def fork_e(self, game_board):
+    # Block Fork E
+    def block_fork_e(self, game_board):
         fork_1 = [] # 1, 6
         fork_2 = [] # 0, 5
         fork_3 = [] # 2, 7
@@ -595,8 +595,8 @@ class Human:
         else:
             return -1
     
-    # Fork F
-    def fork_f(self, game_board):
+    # Block Fork F
+    def block_fork_f(self, game_board):
         fork_1 = [] # 4, 6
         fork_2 = [] # 0, 4
         fork_3 = [] # 2, 4
@@ -626,8 +626,8 @@ class Human:
         else:
             return -1
 
-    # Fork G
-    def fork_g(self, game_board):
+    # Block Fork G
+    def block_fork_g(self, game_board):
         fork_1 = [] # 4, 6
         fork_2 = [] # 0, 4
         fork_3 = [] # 2, 4
@@ -657,8 +657,8 @@ class Human:
         else:
             return -1
 
-    # Fork H
-    def fork_h(self, game_board):
+    # Block Fork H
+    def block_fork_h(self, game_board):
         fork_1 = [] # 1, 6
         fork_2 = [] # 0, 5
         fork_3 = [] # 2, 7
@@ -691,8 +691,8 @@ class Human:
         else:
             return -1
 
-    # Fork I
-    def fork_i(self, game_board):
+    # Block Fork I
+    def block_fork_i(self, game_board):
         fork_1 = [] # 0, 7
         fork_2 = [] # 2, 3
         fork_3 = [] # 1, 8
