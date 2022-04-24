@@ -18,6 +18,9 @@ class Menace:
 
     def get_game_states(self):
         return self.game_states
+    
+    def set_game_states(self, game_states):
+        self.game_states = game_states
 
     #Function to decide which move Menace will make1
     def move_to_make(self, game_board):
