@@ -1,8 +1,10 @@
 from concurrent.futures import ThreadPoolExecutor
+from time import gmtime
 from game_board import Game_Board
 from menace import Menace
 from human import Human
 import datetime
+import json
 
 number_of_plays = 0
 number_of_wins = 0
@@ -99,6 +101,12 @@ def training():
 
 #This method takes human input for gameplay. To be used after training
 def gameplay():
+
+    with open("game_states_log.json", "r") as game_states_file:
+        game_states = json.load(game_states_file)
+    game_states_file.close()
+    menace.set_game_states(game_states)
+
     game_board_gameplay = Game_Board()
     game_board_gameplay.display_board()
 
@@ -192,6 +200,10 @@ if __name__ == '__main__':
     log_file.write("Lost Percentage: " + str(lose_percentage) + "\n")
     log_file.write("Draw Percentage: " + str(draw_percentage) + "\n")
     log_file.write("-------------------------------------------------------" + "\n")
+
+    with open("game_states_log.json", "w") as game_states_file:
+        json.dump(menace.get_game_states(), game_states_file)
+
     
     print("Gameplay now:")
     gameplay()
