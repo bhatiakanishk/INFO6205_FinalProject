@@ -6,7 +6,15 @@ Raj Mehta (NUID): 001094914
 
 Kanishk Bhatia (NUID): 001580259
 
-## Instructions:
+## System Requirements
+a) pip install python3
+
+b) pip install pytest
+
+## Running the game
+a) python3 main.py
+
+## Requirements for the projects
 a) Implement "The Menace" by replacing the matchboxes with values in a dictionary.
 
 b) Train the Menace by running games played against "human" strategy, which is based upon optimal strategy.
