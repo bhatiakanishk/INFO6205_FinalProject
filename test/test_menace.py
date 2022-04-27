@@ -15,4 +15,4 @@ class MenaceTest(unittest.TestCase):
         
         menace_obj = menace.Menace()
         received_game_board = game_board_test.get_game_board()
-        self.assertEquals(menace_obj.move_to_make(game_board_test), 8)
+        self.assertEqual(menace_obj.move_to_make(game_board_test), 8)
