@@ -1,6 +1,5 @@
 #This will contain unit tests for main
 
-import pytest
 import unittest
 import sys
 import os

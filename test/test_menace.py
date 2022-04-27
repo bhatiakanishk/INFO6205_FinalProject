@@ -1,6 +1,5 @@
 #This will contain unit tests for the Menace
 from asyncio.windows_events import NULL
-import pytest
 import unittest
 import sys
 import os
