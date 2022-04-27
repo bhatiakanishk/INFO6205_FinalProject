@@ -76,5 +76,5 @@ class Menace:
         #Confiscate beads from elements in moves_played on loosing the game
         print("Menace Loses.")
         for(game_board, chosen_bead) in self.moves_played:
-            matchbox = self.game_states[game_board]
-            del matchbox[matchbox.index(chosen_bead)]
+            curr_state = self.game_states[game_board]
+            del curr_state[curr_state.index(chosen_bead)]
