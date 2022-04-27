@@ -1,5 +1,7 @@
+from asyncore import write
 from concurrent.futures import ThreadPoolExecutor
 from time import gmtime
+from turtle import write_docstringdict
 from game_board import Game_Board
 from menace import Menace
 from human import Human
@@ -10,12 +12,8 @@ number_of_plays = 0
 number_of_wins = 0
 number_of_draws = 0
 number_of_loses = 0
-training_log_file = open('training_log.txt', 'a')
-gameplay_log_file = open('gameplay_log.txt', 'w')
-
-def logging(current_time, result):
-    training_log_file = open('training_log.txt', 'a')
-    training_log_file.write("Time: " + str(current_time) + " | Result: " + str(result) + "\n")
+training_log_file = open('logs/training_log.txt', 'a')
+gameplay_log_file = open('logs/gameplay_log.txt', 'w')
 
 #This method uses human optimal strategy for opponent
 def training():
@@ -32,7 +30,8 @@ def training():
         menace_move = menace.move_to_make(game_board_training)
         game_board_training.make_move_on_board(menace_move, "X")
         
-        #print("Move Made By Menace:")
+        # print("Move Made By Menace:")
+        # print(str(menace_move))
         #game_board_training.display_board()
 
         if game_board_training.win_condition():
@@ -40,9 +39,11 @@ def training():
             number_of_wins += 1
             human.lose_result()
 
-            current_time = datetime.datetime.now()
             result = "Menace Win"
-            logging(current_time, result)
+            current_time = datetime.datetime.now()
+            write_training_logs(current_time, result)
+            menace.reset_moves_played()
+            write_game_states(menace)
 
             break
             
@@ -50,17 +51,16 @@ def training():
             menace.draw_result()
             number_of_draws += 1
 
-            current_time = datetime.datetime.now()
             result = "Menace Draw"
-            logging(current_time, result)
-            
+            current_time = datetime.datetime.now()
+            write_training_logs(current_time, result)
+            menace.reset_moves_played()
+            write_game_states(menace)
             break
 
 
-        #Take move input from human
+        #Determine move according to human optimal strategy
         human_move = human.human_move(game_board_training)
-        #print("Human strategy tries to make:")
-        #print(human_move)
 
         #Validate if move is valid, i.e. between 0 and 8 and cell is empty
         if game_board_training.is_move_valid(human_move, game_board_training):
@@ -69,23 +69,26 @@ def training():
 
             if game_board_training.win_condition():
                 human.win_result()
+                print("Calling lose")
                 menace.lose_result()
                 number_of_loses += 1
 
-                current_time = datetime.datetime.now()
                 result = "Menace Lose"
-                logging(current_time, result)
-
+                current_time = datetime.datetime.now()
+                write_training_logs(current_time, result)
+                menace.reset_moves_played()
+                write_game_states(menace)
                 break
 
             if game_board_training.draw_condition():
                 menace.draw_result()
                 number_of_draws += 1
 
-                current_time = datetime.datetime.now()
                 result = "Menace Draw"
-                logging(current_time, result)
-
+                current_time = datetime.datetime.now()
+                write_training_logs(current_time, result)
+                menace.reset_moves_played()
+                write_game_states(menace)
                 break
         else:
             print("Invalid move.")
@@ -93,18 +96,119 @@ def training():
             human.lose_result
             number_of_wins += 1
 
-            current_time = datetime.datetime.now()
             result = "Menace Win"
-            logging(current_time, result)
+            current_time = datetime.datetime.now()
+            write_training_logs(current_time, result)
+            menace.reset_moves_played()
+            write_game_states(menace)
+            break
 
+#This method trains two menaces against each other
+def two_menace_training():
+    game_states = load_game_states()
+    menace_one.set_game_states(game_states)
+    menace_two.set_game_states(game_states)
+
+    game_board_training = Game_Board()
+    global number_of_plays
+    global number_of_wins
+    global number_of_draws
+    global number_of_loses
+    number_of_plays += 1
+    #game_board_training.display_board()
+
+    while True:
+        #Determine move of menace based on training
+        menace_move = menace_one.move_to_make(game_board_training)
+        game_board_training.make_move_on_board(menace_move, "X")
+        
+        # print("Move Made By Menace:")
+        # print(str(menace_move))
+        #game_board_training.display_board()
+
+        if game_board_training.win_condition():
+            menace_one.win_result()
+            number_of_wins += 1
+            menace_two.lose_result()
+
+            result = "Menace Win"
+            current_time = datetime.datetime.now()
+            write_training_logs(current_time, result)
+            menace_one.reset_moves_played()
+            menace_two.reset_moves_played()
+            write_game_states(menace_one)
+            write_game_states(menace_two)
+            break
+            
+        if game_board_training.draw_condition():
+            menace_one.draw_result()
+            menace_two.draw_result()
+            number_of_draws += 1
+
+            result = "Menace Draw"
+            current_time = datetime.datetime.now()
+            write_training_logs(current_time, result)
+            menace_one.reset_moves_played()
+            menace_two.reset_moves_played()
+            write_game_states(menace_one)
+            write_game_states(menace_two)
+            break
+
+
+        #Take move from menace
+        menace_two_move = menace_two.move_to_make(game_board_training)
+
+        #Validate if move is valid, i.e. between 0 and 8 and cell is empty
+        if game_board_training.is_move_valid(menace_two_move, game_board_training):
+            game_board_training.make_move_on_board(menace_two_move, "O")
+            #game_board_training.display_board()
+
+            if game_board_training.win_condition():
+                menace_two.win_result()
+                print("Calling lose")
+                menace_one.lose_result()
+                number_of_loses += 1
+
+                result = "Menace Lose"
+                current_time = datetime.datetime.now()
+                write_training_logs(current_time, result)
+                menace_one.reset_moves_played()
+                menace_two.reset_moves_played()
+                write_game_states(menace_one)
+                write_game_states(menace_two)
+                break
+
+            if game_board_training.draw_condition():
+                menace_one.draw_result()
+                menace_two.draw_result()
+                number_of_draws += 1
+
+                result = "Menace Draw"
+                current_time = datetime.datetime.now()
+                write_training_logs(current_time, result)
+                menace_one.reset_moves_played()
+                menace_two.reset_moves_played()
+                write_game_states(menace_one)
+                write_game_states(menace_two)
+                break
+        else:
+            print("Invalid move.")
+            menace_one.win_result()
+            menace_two.lose_result
+            number_of_wins += 1
+
+            result = "Menace Win"
+            current_time = datetime.datetime.now()
+            write_training_logs(current_time, result)
+            menace_one.reset_moves_played()
+            menace_two.reset_moves_played()
+            write_game_states(menace_one)
+            write_game_states(menace_two)
             break
 
 #This method takes human input for gameplay. To be used after training
 def gameplay():
-
-    with open("game_states_log.json", "r") as game_states_file:
-        game_states = json.load(game_states_file)
-    game_states_file.close()
+    game_states = load_game_states()
     menace.set_game_states(game_states)
 
     game_board_gameplay = Game_Board()
@@ -127,10 +231,12 @@ def gameplay():
         if game_board_gameplay.win_condition():
             menace.win_result()
             human.lose_result()
+            menace.reset_moves_played()
             break
             
         if game_board_gameplay.draw_condition():
             menace.draw_result()
+            menace.reset_moves_played()
             break
 
 
@@ -149,6 +255,7 @@ def gameplay():
             if game_board_gameplay.win_condition():
                 human.win_result()
                 menace.lose_result()
+                menace.reset_moves_played()
                 break
 
             if game_board_gameplay.draw_condition():
@@ -158,40 +265,37 @@ def gameplay():
             print("Invalid move.")
             menace.win_result()
             human.lose_result
+            menace.reset_moves_played()
             break
 
     
     gameplay_log_file.write("Time: " + str(current_time) + " | Game Ends \n")
     gameplay_log_file.write("-------------------------------------------------------" + "\n")
 
-if __name__ == '__main__':
-    #Intialize objects of game board, menace and human
-    menace = Menace()
-    human = Human()
+#Load the game states for gameplay
+def load_game_states():
+    with open("logs/game_states_log.json", "r") as game_states_file:
+        game_states = json.load(game_states_file)
+    game_states_file.close()
+    return game_states
 
-    print("Training now:")
-    
-    #Multithreading implementation
-    processes = []
-    with ThreadPoolExecutor(max_workers=100) as executor:
-        for i in range(1000):
-            processes.append(executor.submit(training()))
-    print("Training complete")
+#Write the game states to the JSON file
+def write_game_states(menace_object):
+    with open("logs/game_states_log.json", "w") as game_states_file:
+        json.dump(menace_object.get_game_states(), game_states_file)
 
-    print("Number of games: " + str(number_of_plays))
-    print("Number of wins: " + str(number_of_wins))
-    print("Number of draws: " + str(number_of_draws))
-    print("Number of loses: " + str(number_of_loses))
+#Write training logs to training_log.txt
+def write_training_logs(current_time, result):
+    training_log_file = open('logs/training_log.txt', 'a')
+    training_log_file.write("Time: " + str(current_time) + " | Result: " + str(result) + "\n")
 
+#Write training results to results_logs.txt
+def write_result_logs():
     win_percentage = (100*number_of_wins)/number_of_plays
     lose_percentage = (100*number_of_loses)/number_of_plays
     draw_percentage = (100*number_of_draws)/number_of_plays
-    print("Win Percentage: " + str(win_percentage))
-    print("Lose Percentage: " + str(lose_percentage))
-    print("Draw Percentage: " + str(draw_percentage))
-    print("-------------------------------------------------") 
 
-    log_file = open('training_log.txt', 'a')
+    log_file = open('logs/results_log.txt', 'a')
     log_file.write("Number of games: " + str(number_of_plays) + "\n")
     log_file.write("Number of wins: " + str(number_of_wins) + "\n")
     log_file.write("Number of draws: " + str(number_of_draws) + "\n")
@@ -201,17 +305,60 @@ if __name__ == '__main__':
     log_file.write("Draw Percentage: " + str(draw_percentage) + "\n")
     log_file.write("-------------------------------------------------------" + "\n")
 
-    with open("game_states_log.json", "w") as game_states_file:
-        json.dump(menace.get_game_states(), game_states_file)
+#Call the training() method
+def call_menace_human_training(menace, human, menace_human_training_iterations):
+    print("Training between Menace and Human Optimal Strategy Begins:")
+    #Multithreading implementation
+    processes = []
+    with ThreadPoolExecutor(max_workers=50) as executor:
+        for i in range(menace_human_training_iterations):
+            processes.append(executor.submit(training()))
+            game_states = load_game_states()
+            menace.set_game_states(game_states)
 
-    
+    print("Training between Menace and Human Optimal Strategy Complete.")
+    write_result_logs()
+
+#Call the two_menace_training() method
+def call_menace_menace_training(menace_menace_training_iterations):
+    print("Training between Menace and Menace Begins:")
+    #Multithreading implementation
+    processes = []
+    with ThreadPoolExecutor(max_workers=50) as executor:
+        for i in range(menace_menace_training_iterations):
+            processes.append(executor.submit(two_menace_training()))
+            
+    print("Training between Menace and Menace Complete.")
+    write_result_logs()
+
+#Call the gameplay() method
+def call_user_gameplay():
     print("Gameplay now:")
     gameplay()
-    print("Gameplay complete")
+    write_game_states(menace)
+
+#Main method
+if __name__ == '__main__':
+    #Initialize objects Menace and Human
+    menace = Menace()
+    human = Human()
+
+    menace_one = Menace()
+    menace_two = Menace()
+
+    menace_human_training_iterations = 2000
+    menace_menace_training_iterations = 10000
+    
     while True:
-        decision = input("Play again? Press y to play again and any other key to cancel:")
-        if decision == 'y':
-            gameplay()
-            print("Gameplay complete")
+        print("Press 1 to traing menace against human optimal strategy.")
+        print("Press 2 to train menace against menace.")
+        print("Press 3 to play against the menace")
+        decision = input("Input Decision:")
+        if decision == "1":
+            call_menace_human_training(menace, human, menace_human_training_iterations)
+        elif decision == "2":
+            call_menace_menace_training(menace_menace_training_iterations)
+        elif decision == "3":
+            call_user_gameplay()
         else:
             break

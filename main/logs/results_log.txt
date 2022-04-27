@@ -1,0 +1,16 @@
+Number of games: 2000
+Number of wins: 1617
+Number of draws: 253
+Number of loses: 130
+Win Percentage: 80.85
+Lost Percentage: 6.5
+Draw Percentage: 12.65
+-------------------------------------------------------
+Number of games: 12000
+Number of wins: 7603
+Number of draws: 2570
+Number of loses: 1827
+Win Percentage: 63.358333333333334
+Lost Percentage: 15.225
+Draw Percentage: 21.416666666666668
+-------------------------------------------------------

@@ -8,9 +8,13 @@ class Menace:
         #This is an array to store the moves played by Menace. Will be used for training.
         self.moves_played = []
 
-        self.alpha = 5
+        #Number of beads to add at start of the game
+        self.alpha = 3
+        #Number of beads to add in case of a win
         self.beta = 3
-        self.gamma = 2
+        #Number of beads to remove in case of a lose
+        self.gamma = 1
+        #Number of beads to add in case of a draw
         self.delta = 1
     
     def get_moves_played(self):
@@ -22,9 +26,12 @@ class Menace:
     def set_game_states(self, game_states):
         self.game_states = game_states
 
-    #Function to decide which move Menace will make1
+    def reset_moves_played(self):
+        self.moves_played = []
+
+    #Function to decide which move Menace will make
     def move_to_make(self, game_board):
-        game_board = game_board.board_string()
+        game_board = game_board.convert_board_to_string()
         #Menace will learn game_states as and when it sees them
         if game_board not in self.game_states:
             beads_dataset = []
@@ -42,6 +49,8 @@ class Menace:
         #Choose a random bead from the set of available beads
         if len(available_beads) > 0:
             chosen_bead = random.choice(available_beads)
+            # print("Chosen bead:")
+            # print(chosen_bead)
 
             #Add the game state (i.e. game_board) and the chosen bead (i.e. move) to moves_played to keep track
             self.moves_played.append((game_board, chosen_bead))
@@ -66,3 +75,6 @@ class Menace:
     def lose_result(self):
         #Confiscate beads from elements in moves_played on loosing the game
         print("Menace Loses.")
+        for(game_board, chosen_bead) in self.moves_played:
+            matchbox = self.game_states[game_board]
+            del matchbox[matchbox.index(chosen_bead)]

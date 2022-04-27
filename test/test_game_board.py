@@ -25,7 +25,7 @@ class GameBoardTest(unittest.TestCase):
         game_board_test = game_board.Game_Board()
         game_board_test.make_move_on_board(0, "X")
         received_game_board = game_board_test.get_game_board()
-        self.assertEquals(received_game_board[0], "X")
+        self.assertEqual(received_game_board[0], "X")
 
     def test_is_move_valid(self):
         game_board_test = game_board.Game_Board()
