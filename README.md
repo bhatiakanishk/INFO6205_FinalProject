@@ -17,7 +17,10 @@ Kanishk Bhatia (NUID): 001580259
 ```
  python3 main.py
 ```
-
+## Running the tests
+```
+python -m unittest
+```
 ## Requirements for the Project
 a) Implement "The Menace" by replacing the matchboxes with values in a dictionary.
 

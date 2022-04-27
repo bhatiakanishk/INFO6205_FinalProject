@@ -134,6 +134,7 @@ class Human:
             side_list.append(7)
         if(len(side_list) == 0):
             return -1
+        print(side_list)
         return random.choice(side_list)
     
     # Block Fork: Cause a scenario where the player has two ways to win
