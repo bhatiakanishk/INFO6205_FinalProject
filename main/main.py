@@ -1,7 +1,5 @@
 from asyncore import write
 from concurrent.futures import ThreadPoolExecutor
-from time import gmtime
-from turtle import write_docstringdict
 from game_board import Game_Board
 from menace import Menace
 from human import Human
