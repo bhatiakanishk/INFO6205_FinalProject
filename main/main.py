@@ -350,7 +350,7 @@ if __name__ == '__main__':
     menace_menace_training_iterations = 10000
     
     while True:
-        print("Press 1 to traing menace against human optimal strategy.")
+        print("Press 1 to traning menace against human optimal strategy.")
         print("Press 2 to train menace against menace.")
         print("Press 3 to play against the menace")
         decision = input("Input Decision:")
