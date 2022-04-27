@@ -10,9 +10,6 @@ Kanishk Bhatia (NUID): 001580259
 ```
  pip install python3
 ```
-```
- pip install pytest
-```
 ## Running the game
 ```
  python3 main.py
