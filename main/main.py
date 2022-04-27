@@ -279,7 +279,7 @@ def load_game_states():
 
 #Write the game states to the JSON file
 def write_game_states(menace_object):
-    with open("logs/game_states_log.json", "w") as game_states_file:
+    with open('logs/game_states_log.json', 'w') as game_states_file:
         json.dump(menace_object.get_game_states(), game_states_file)
 
 #Write training logs to training_log.txt
@@ -344,7 +344,7 @@ if __name__ == '__main__':
     menace_one = Menace()
     menace_two = Menace()
 
-    menace_human_training_iterations = 2000
+    menace_human_training_iterations = 4000
     menace_menace_training_iterations = 10000
     
     while True:
