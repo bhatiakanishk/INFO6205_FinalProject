@@ -11,10 +11,33 @@ Kanishk Bhatia (NUID): 001580259
  pip install python3
 ```
 ## Running the game
+a) Clone the repo
 ```
- python3 main.py
+git clone https://github.com/bhatiakanishk/INFO6205_FinalProject.git
+```
+
+b) Go to the cloned repository
+```
+cd INFO6205_FinalProject
+```
+
+c) Go to the main directory
+```
+cd main
+```
+
+d) Run the program
+```
+python3 main.py
 ```
 ## Running the tests
+
+a) Go to the cloned repository
+```
+cd INFO6205_FinalProject
+```
+
+b) Run the unittest
 ```
 python -m unittest
 ```
