@@ -13,7 +13,7 @@ class Human:
         print("Human Player Loses.")
     
     # Win: If the player has two in a row, they can place a third to get three in a row.
-    def two_in_a_row(self, game_board):
+    def block_two_in_a_row(self, game_board):
         if(game_board[0] == 'X' and game_board[1] == 'X' and game_board[2] == ' '):
             return 2
         elif(game_board[0] == 'X' and game_board[3] == 'X' and game_board[6] == ' '):
@@ -50,7 +50,7 @@ class Human:
             return -1
 
     # Block: If the opponent has two in a row, the player must play the third themselves to block the opponent
-    def block_two_in_a_row(self, game_board):
+    def two_in_a_row(self, game_board):
         if(game_board[0] == 'O' and game_board[1] == 'O' and game_board[2] == ' '):
             return 2
         elif(game_board[0] == 'O' and game_board[3] == 'O' and game_board[6] == ' '):
@@ -136,9 +136,9 @@ class Human:
             return -1
         return random.choice(side_list)
     
-    # Fork: Cause a scenario where the player has two ways to win
-    # Fork A
-    def fork_a(self, game_board):
+    # Block Fork: Cause a scenario where the player has two ways to win
+    # Block Fork A
+    def block_fork_a(self, game_board):
         fork_1 = [] # 1, 4, 5
         fork_2 = [] # 4, 5, 7
         fork_3 = [] # 3, 4, 7
@@ -172,8 +172,8 @@ class Human:
         else:
             return -1
 
-    # Fork B
-    def fork_b(self, game_board):
+    # Block Fork B
+    def block_fork_b(self, game_board):
         fork_1 = [] # 2, 6
         fork_2 = [] # 0, 8
 
@@ -196,8 +196,8 @@ class Human:
         else:
             return -1
     
-    # Fork C
-    def fork_c(self, game_board):
+    # Block Fork C
+    def block_fork_c(self, game_board):
         fork_1 = [] # 5, 7
         fork_2 = [] # 3, 7
         fork_3 = [] # 1, 3
@@ -226,8 +226,8 @@ class Human:
         else:
             return -1
 
-    # Fork D
-    def fork_D(self, game_board):
+    # Block Fork D
+    def block_fork_d(self, game_board):
         fork_1 = [] # 5, 6, 8
         fork_2 = [] # 0, 7, 8
         fork_3 = [] # 0, 2, 3
@@ -264,8 +264,8 @@ class Human:
         else:
             return -1
 
-    # Fork E
-    def fork_e(self, game_board):
+    # Block Fork E
+    def block_fork_e(self, game_board):
         fork_1 = [] # 1, 6
         fork_2 = [] # 0, 5
         fork_3 = [] # 2, 7
@@ -298,8 +298,8 @@ class Human:
         else:
             return -1
     
-    # Fork F
-    def fork_f(self, game_board):
+    # Block Fork F
+    def block_fork_f(self, game_board):
         fork_1 = [] # 4, 6
         fork_2 = [] # 0, 4
         fork_3 = [] # 2, 4
@@ -329,8 +329,8 @@ class Human:
         else:
             return -1
 
-    # Fork G
-    def fork_g(self, game_board):
+    # Block Fork G
+    def block_fork_g(self, game_board):
         fork_1 = [] # 4, 6
         fork_2 = [] # 0, 4
         fork_3 = [] # 2, 4
@@ -360,8 +360,8 @@ class Human:
         else:
             return -1
 
-    # Fork H
-    def fork_h(self, game_board):
+    # Block Fork H
+    def block_fork_h(self, game_board):
         fork_1 = [] # 1, 6
         fork_2 = [] # 0, 5
         fork_3 = [] # 2, 7
@@ -394,8 +394,8 @@ class Human:
         else:
             return -1
 
-    # Fork I
-    def fork_i(self, game_board):
+    # Block Fork I
+    def block_fork_i(self, game_board):
         fork_1 = [] # 0, 7
         fork_2 = [] # 2, 3
         fork_3 = [] # 1, 8
@@ -427,15 +427,10 @@ class Human:
             return random.choice(fork_4)
         else:
             return -1
-    
 
-
-
-
-
-    # Block Fork: Cause a scenario where the player has two ways to win
-    # Block Fork A
-    def block_fork_a(self, game_board):
+    # Fork: Cause a scenario where the player has two ways to win
+    # Fork A
+    def fork_a(self, game_board):
         fork_1 = [] # 1, 4, 5
         fork_2 = [] # 4, 5, 7
         fork_3 = [] # 3, 4, 7
@@ -469,8 +464,8 @@ class Human:
         else:
             return -1
 
-    # Block Fork B
-    def block_fork_b(self, game_board):
+    #Fork B
+    def fork_b(self, game_board):
         fork_1 = [] # 2, 6
         fork_2 = [] # 0, 8
 
@@ -493,8 +488,8 @@ class Human:
         else:
             return -1
     
-    # Block Fork C
-    def block_fork_c(self, game_board):
+    #Fork C
+    def fork_c(self, game_board):
         fork_1 = [] # 5, 7
         fork_2 = [] # 3, 7
         fork_3 = [] # 1, 3
@@ -523,8 +518,8 @@ class Human:
         else:
             return -1
 
-    # Block Fork D
-    def block_fork_D(self, game_board):
+    #Fork D
+    def fork_d(self, game_board):
         fork_1 = [] # 5, 6, 8
         fork_2 = [] # 0, 7, 8
         fork_3 = [] # 0, 2, 3
@@ -561,8 +556,8 @@ class Human:
         else:
             return -1
 
-    # Block Fork E
-    def block_fork_e(self, game_board):
+    #Fork E
+    def fork_e(self, game_board):
         fork_1 = [] # 1, 6
         fork_2 = [] # 0, 5
         fork_3 = [] # 2, 7
@@ -595,8 +590,8 @@ class Human:
         else:
             return -1
     
-    # Block Fork F
-    def block_fork_f(self, game_board):
+    #Fork F
+    def fork_f(self, game_board):
         fork_1 = [] # 4, 6
         fork_2 = [] # 0, 4
         fork_3 = [] # 2, 4
@@ -626,8 +621,8 @@ class Human:
         else:
             return -1
 
-    # Block Fork G
-    def block_fork_g(self, game_board):
+    #Fork G
+    def fork_g(self, game_board):
         fork_1 = [] # 4, 6
         fork_2 = [] # 0, 4
         fork_3 = [] # 2, 4
@@ -657,8 +652,8 @@ class Human:
         else:
             return -1
 
-    # Block Fork H
-    def block_fork_h(self, game_board):
+    #Fork H
+    def fork_h(self, game_board):
         fork_1 = [] # 1, 6
         fork_2 = [] # 0, 5
         fork_3 = [] # 2, 7
@@ -680,7 +675,7 @@ class Human:
             fork_3.append(7)
         if(game_board[8] == ' '):
             fork_4.append(8)
-        if((game_board[1] == ' ' or game_board[6] == ' ') and (game_board[0] == 'O' and game_board[2] == 'X' and game_board[4] == 'X')):
+        if((game_board[1] == ' ' or game_board[6] == ' ') and (game_board[0] == 'O' and game_board[2] == 'O' and game_board[4] == 'O')):
             return random.choice(fork_1)
         elif((game_board[0] == ' ' or game_board[5] == ' ') and (game_board[2] == 'O' and game_board[4] == 'O' and game_board[8] == 'O')):
             return random.choice(fork_2)
@@ -691,8 +686,8 @@ class Human:
         else:
             return -1
 
-    # Block Fork I
-    def block_fork_i(self, game_board):
+    #Fork I
+    def fork_i(self, game_board):
         fork_1 = [] # 0, 7
         fork_2 = [] # 2, 3
         fork_3 = [] # 1, 8
@@ -725,12 +720,14 @@ class Human:
         else:
             return -1
 
-
+    #Call the functions of human optimal strategy in the correct order to find the first possible move
     def human_move(self, game_board):
         game_board_object = game_board
-        game_board = game_board.board_string()
+        game_board = game_board.convert_board_to_string()
         move = -1
         move = self.two_in_a_row(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.block_two_in_a_row(game_board)
         if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
             move = self.center(game_board)
         if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
@@ -739,5 +736,41 @@ class Human:
             move = self.empty_corner(game_board)
         if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
             move = self.empty_side(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.fork_a(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.fork_b(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.fork_c(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.fork_d(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.fork_e(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.fork_f(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.fork_g(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.fork_h(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.fork_i(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.block_fork_a(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.block_fork_b(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.block_fork_c(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.block_fork_d(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.block_fork_e(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.block_fork_f(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.block_fork_g(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.block_fork_h(game_board)
+        if move == -1 or game_board_object.is_move_valid(move, game_board_object) == False:
+            move = self.block_fork_i(game_board)
 
         return move

@@ -1,0 +1,76 @@
+Time: 2022-04-26 22:17:46.897674 | Game Starts 
+Time: 2022-04-26 22:17:46.898190 | Move made by menace: 2
+Time: 2022-04-26 22:17:48.398759 | Move made by human: 2
+Time: 2022-04-26 22:17:48.398853 | Move made by menace: 4
+Time: 2022-04-26 22:17:50.085621 | Move made by human: 4
+Time: 2022-04-26 22:17:50.085778 | Move made by menace: 3
+Time: 2022-04-26 22:17:51.889251 | Move made by human: 3
+Time: 2022-04-26 22:17:51.889440 | Move made by menace: 1
+Time: 2022-04-26 22:17:54.102030 | Move made by human: 1
+Time: 2022-04-26 22:17:54.102322 | Move made by menace: 8
+Time: 2022-04-26 22:17:54.102322 | Game Ends 
+-------------------------------------------------------
+Time: 2022-04-26 22:17:56.775922 | Game Starts 
+Time: 2022-04-26 22:17:56.775988 | Move made by menace: 2
+Time: 2022-04-26 22:17:58.016546 | Move made by human: 2
+Time: 2022-04-26 22:17:58.016713 | Move made by menace: 5
+Time: 2022-04-26 22:17:59.631428 | Move made by human: 5
+Time: 2022-04-26 22:17:59.631578 | Move made by menace: 4
+Time: 2022-04-26 22:18:02.934081 | Move made by human: 4
+Time: 2022-04-26 22:18:02.934360 | Move made by menace: 6
+Time: 2022-04-26 22:18:02.934360 | Game Ends 
+-------------------------------------------------------
+Time: 2022-04-26 22:18:06.123091 | Game Starts 
+Time: 2022-04-26 22:18:06.123126 | Move made by menace: 2
+Time: 2022-04-26 22:18:08.317081 | Move made by human: 2
+Time: 2022-04-26 22:18:08.317228 | Move made by menace: 5
+Time: 2022-04-26 22:18:09.863279 | Move made by human: 5
+Time: 2022-04-26 22:18:09.863408 | Move made by menace: 4
+Time: 2022-04-26 22:18:13.735209 | Move made by human: 4
+Time: 2022-04-26 22:18:13.735441 | Move made by menace: 6
+Time: 2022-04-26 22:18:13.735441 | Game Ends 
+-------------------------------------------------------
+Time: 2022-04-26 22:18:17.177090 | Game Starts 
+Time: 2022-04-26 22:18:17.177134 | Move made by menace: 2
+Time: 2022-04-26 22:18:19.603568 | Move made by human: 2
+Time: 2022-04-26 22:18:19.603793 | Move made by menace: 8
+Time: 2022-04-26 22:18:21.558849 | Move made by human: 8
+Time: 2022-04-26 22:18:21.559193 | Move made by menace: 3
+Time: 2022-04-26 22:18:26.388801 | Move made by human: 3
+Time: 2022-04-26 22:18:26.389151 | Move made by menace: 0
+Time: 2022-04-26 22:18:30.590014 | Move made by human: 0
+Time: 2022-04-26 22:18:30.590014 | Game Ends 
+-------------------------------------------------------
+Time: 2022-04-26 22:18:32.846145 | Game Starts 
+Time: 2022-04-26 22:18:32.846182 | Move made by menace: 0
+Time: 2022-04-26 22:18:36.315276 | Move made by human: 0
+Time: 2022-04-26 22:18:36.315460 | Move made by menace: 2
+Time: 2022-04-26 22:18:37.800932 | Move made by human: 2
+Time: 2022-04-26 22:18:37.801055 | Move made by menace: 7
+Time: 2022-04-26 22:18:43.355564 | Move made by human: 7
+Time: 2022-04-26 22:18:43.355678 | Move made by menace: 3
+Time: 2022-04-26 22:18:48.765927 | Move made by human: 3
+Time: 2022-04-26 22:18:48.766121 | Move made by menace: 8
+Time: 2022-04-26 22:18:48.766121 | Game Ends 
+-------------------------------------------------------
+Time: 2022-04-26 22:18:50.093563 | Game Starts 
+Time: 2022-04-26 22:18:50.093626 | Move made by menace: 2
+Time: 2022-04-26 22:19:02.283226 | Move made by human: 2
+Time: 2022-04-26 22:19:02.283363 | Move made by menace: 7
+Time: 2022-04-26 22:19:13.518740 | Move made by human: 7
+Time: 2022-04-26 22:19:13.518962 | Move made by menace: 0
+Time: 2022-04-26 22:19:16.063903 | Move made by human: 0
+Time: 2022-04-26 22:19:16.064107 | Move made by menace: 6
+Time: 2022-04-26 22:19:20.223609 | Move made by human: 6
+Time: 2022-04-26 22:19:20.224273 | Move made by menace: 5
+Time: 2022-04-26 22:19:20.224273 | Game Ends 
+-------------------------------------------------------
+Time: 2022-04-26 22:19:21.542868 | Game Starts 
+Time: 2022-04-26 22:19:21.542893 | Move made by menace: 5
+Time: 2022-04-26 22:19:23.327247 | Move made by human: 5
+Time: 2022-04-26 22:19:23.327547 | Move made by menace: 7
+Time: 2022-04-26 22:19:28.590245 | Move made by human: 7
+Time: 2022-04-26 22:19:28.590548 | Move made by menace: 3
+Time: 2022-04-26 22:19:30.867193 | Move made by human: 3
+Time: 2022-04-26 22:19:30.867193 | Game Ends 
+-------------------------------------------------------
