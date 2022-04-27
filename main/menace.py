@@ -38,9 +38,9 @@ class Menace:
             print(game_board)
             for iterator, cell in enumerate(game_board):
                 if cell == ' ':
-                    #Add cell number to beads_dataset
+                    # Add cell number to beads_dataset
                     beads_dataset.append(iterator)
-            #Add 5 beads of the available moves
+            # Add 5 beads of the available moves
             self.game_states[game_board] = beads_dataset * self.alpha
 
         #Get the beads for a particular game state
@@ -52,7 +52,7 @@ class Menace:
             # print("Chosen bead:")
             # print(chosen_bead)
 
-            #Add the game state (i.e. game_board) and the chosen bead (i.e. move) to moves_played to keep track
+            # Add the game state (i.e. game_board) and the chosen bead (i.e. move) to moves_played to keep track
             self.moves_played.append((game_board, chosen_bead))
         else:
             chosen_bead = -1
